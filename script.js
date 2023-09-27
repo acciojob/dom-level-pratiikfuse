@@ -2,13 +2,13 @@
 function getDOMLevel()
 {
 	const levelElement = document.getElementById('level');
-	let count  = 0;
-	while(levelElement.parentNode)
+	let count  = 1;
+	while(levelElement.parentNode !== document.getElementsByTagName('html'))
 		{
 			levelElement = levelElement.parentNode;
 			count++;
 		}
-	alert("The level of the element is: "+count);
+	 alert("The level of the element is: "+count);
 }
 
 getDOMLevel();
